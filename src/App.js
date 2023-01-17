@@ -3,18 +3,26 @@ import { useState } from 'react';
 import './App.css';
 import Button from './components/Button';
 import Input from './components/Input';
+import { evaluate } from 'mathjs';
 
 const App = () => {
   const [text, setText] = useState("");
   const [result, setResult] = useState("");
 
   const addToText = (v) => {
-     setText(text + v + " ");
+   
+    setText(text + v+"");
+    
+   // setText((text) => [...text, v + " "]);
   };
 
   const restInput=()=>{
     setText("");
     setResult("");
+  };
+
+  const calculateResult = () =>{
+    setResult(evaluate(text)); 
   };
 
   const bntColor = "orange"
@@ -43,8 +51,8 @@ const App = () => {
         <div className="row">
           <Button icon="0" handleClick={addToText} />
           <Button icon="." handleClick={addToText} />
-          <Button icon="=" handleClick={addToText} />
-          <Button icon="-" color={bntColor} handleClick={addToText} />
+          <Button icon="="  handleClick={calculateResult} />
+            <Button icon="-" color={bntColor} handleClick={addToText} />
         </div>
         <div className="row">
           <Button icon="Clear" color="red" handleClick={restInput} />
