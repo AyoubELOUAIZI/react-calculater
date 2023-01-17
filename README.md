@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# My Steps to create this app
+1-run npx create-react-app react-calculater
+2-delete some files and update some file to be ready for the project calculater
+3-begin with the App file too test and change to arow function
+4-chan
