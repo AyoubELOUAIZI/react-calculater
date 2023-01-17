@@ -10,3 +10,9 @@
     margin: 4px;
     border-radius: 50px;
 }
+
+.button-wrapper:hover {
+border-radius: 30px;
+cursor: pointer;
+font-size: 50px;
+}

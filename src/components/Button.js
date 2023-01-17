@@ -1,8 +1,10 @@
 import './Button.css'
 
-const Button = ({icon})=>{
+const Button = ({ icon, color, handleClick })=>{
     return (
-        <div className='button-wrapper'>{icon}</div>
+        <div className='button-wrapper' style={{ backgroundColor: color }} onClick={handleClick(icon)}>
+            {icon}
+            </div>
     );
 }
 export default Button;
